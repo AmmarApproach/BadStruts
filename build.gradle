@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'war'
+    id "org.sonarqube" version "5.1.0.4882"
 }
 
 repositories {
@@ -10,4 +11,12 @@ repositories {
 dependencies {
     implementation 'org.apache.struts:struts2-core:2.5.10'
     implementation 'org.apache.logging.log4j:log4j-core:2.13.0'
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "AmmarApproach_BadStruts"
+        property "sonar.organization", "ammar-approach"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
 }
